@@ -25,9 +25,9 @@ A list with elements:
 }
 \details{
 The folded normal density for \code{x} given parameters \code{mu} and \code{sigma} is
-\deqn{f(x;\,\mu,\sigma) = \phi(x;\,\mu,\sigma) + \phi(-x;\,\mu,\sigma),}
-where \code{\phi(\cdot;\,\mu,\sigma)} is the normal density with mean \code{mu} and standard deviation \code{sigma},
-and \code{x} is treated as an absolute value (i.e., \code{abs(x)}).
+\deqn{f(x;\,\mu,\sigma) = \phi(x;\,\mu,\sigma) + \phi(-x;\,\mu,\sigma).}
+Here, \eqn{\phi(\cdot;\,\mu,\sigma)} denotes the normal density with mean \eqn{\mu} and standard deviation \eqn{\sigma}.
+Values of \code{x} are treated as absolute values, i.e., \code{abs(x)}.
 }
 \examples{
 ## Simulate data from a folded normal by taking absolute values

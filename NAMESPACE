@@ -1,1 +1,2 @@
-exportPattern("^[[:alpha:]]+")
+export(mle_folded_normal)
+importFrom(stats, dnorm, mad, nlm, sd)
