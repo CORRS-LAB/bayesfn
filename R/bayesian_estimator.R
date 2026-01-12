@@ -12,7 +12,7 @@
 ##' @param model Optional compiled Stan model; if \code{NULL}, a cached model is loaded.
 ##' @return A list with posterior means, Rhat diagnostics, and posterior samples for \code{mu} and \code{sigma}.
 ##' @export
-fitwrap <- function(x,
+fn_bayes_est <- function(x,
                                         sigma_lower = 1e-2,
                                         mu_upper = 10,
                                         iter = 10000,

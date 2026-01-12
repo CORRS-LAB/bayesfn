@@ -1,5 +1,5 @@
-export(mle_folded_normal)
-export(fitwrap)
+export(fn_mle)
+export(fn_bayes_est)
 export(two_sample_testing)
 export(compile_stan_model)
 importFrom(stats, dnorm, mad, nlm, sd)

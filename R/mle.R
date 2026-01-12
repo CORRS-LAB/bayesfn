@@ -32,7 +32,7 @@ neg_loglik_folded_normal <- function(par, x) {
 ##' @return A list with elements `logLik`, `mu`, `sigma`, `convergence`,
 ##'   and `iterations`.
 ##' @export
-mle_folded_normal <- function(x, start = NULL) {
+fn_mle <- function(x, start = NULL) {
   x <- as.numeric(x)
   x <- x[is.finite(x)]
   eps <- 1e-6

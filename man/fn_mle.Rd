@@ -1,12 +1,12 @@
-\name{mle_folded_normal}
-\alias{mle_folded_normal}
+\name{fn_mle}
+\alias{fn_mle}
 \title{MLE for Folded Normal Distribution}
 \description{
 Estimates the parameters of the folded normal distribution via maximum likelihood.
 The optimization uses \code{nlm} with a log-parameterization for \code{sigma} to ensure positivity.
 }
 \usage{
-mle_folded_normal(x, start = NULL)
+fn_mle(x, start = NULL)
 }
 \arguments{
   \item{x}{Numeric vector of observations. Non-finite values are removed.}
@@ -35,9 +35,9 @@ set.seed(123)
 x <- abs(rnorm(200, mean = 1.2, sd = 0.7))
 
 ## Estimate parameters
-fit <- mle_folded_normal(x)
+fit <- fn_mle(x)
 str(fit)
 
 ## Provide custom starting values (mu, log_sigma)
-fit2 <- mle_folded_normal(x, start = c(1, log(1)))
+fit2 <- fn_mle(x, start = c(1, log(1)))
 }

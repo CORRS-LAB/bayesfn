@@ -1,8 +1,8 @@
-\name{fitwrap}
-\alias{fitwrap}
+\name{fn_bayes_est}
+\alias{fn_bayes_est}
 \title{Bayesian estimation for folded normal}
 \description{Estimates folded normal parameters for a numeric vector using a cached Stan model to avoid recompilation.}
-\usage{fitwrap(x, sigma_lower = 1e-2, mu_upper = 10, iter = 10000, warmup = 4000, chains = 4, model = NULL)}
+\usage{fn_bayes_est(x, sigma_lower = 1e-2, mu_upper = 10, iter = 10000, warmup = 4000, chains = 4, model = NULL)}
 \arguments{
   \item{x}{Numeric vector of observations.}
   \item{sigma_lower}{Lower bound for \code{sigma}.}
@@ -16,5 +16,5 @@
 \examples{
 ## Requires rstan and a compiled/cached model
 # set.seed(1); x <- abs(rnorm(50, 1.2, 0.7))
-# fit <- fitwrap(x)
+# fit <- fn_bayes_est(x)
 }
