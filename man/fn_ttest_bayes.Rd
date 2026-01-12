@@ -1,8 +1,8 @@
-\name{two_sample_testing}
-\alias{two_sample_testing}
+\name{fn_ttest_bayes}
+\alias{fn_ttest_bayes}
 \title{Bayesian two-sample test for folded normal means}
 \description{Tests H0: \eqn{\mu_x < \mu_y} using posterior samples from a cached Stan model. Returns samples and a decision.}
-\usage{two_sample_testing(x1, x2, confidence_level = 0.05, iter = 10000, warmup = 4000, chains = 4, model = NULL)}
+\usage{fn_ttest_bayes(x1, x2, confidence_level = 0.05, iter = 10000, warmup = 4000, chains = 4, model = NULL)}
 \arguments{
   \item{x1}{Numeric vector for sample 1.}
   \item{x2}{Numeric vector for sample 2.}
@@ -18,5 +18,5 @@
 # set.seed(1)
 # x1 <- abs(rnorm(50, 1.2, 0.7))
 # x2 <- abs(rnorm(50, 1.0, 0.8))
-# res <- two_sample_testing(x1, x2)
+# res <- fn_ttest_bayes(x1, x2)
 }

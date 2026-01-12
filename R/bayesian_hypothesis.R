@@ -14,7 +14,7 @@
 ##' @return A list containing posterior samples for \code{mu1}, \code{mu2}, \code{sigma1}, \code{sigma2},
 ##'   the posterior probability \code{p_value = P(mu1 > mu2)}, and \code{decision} (0 accept H0, 1 accept H1).
 ##' @export
-two_sample_testing <- function(x1, x2,
+fn_ttest_bayes <- function(x1, x2,
                                confidence_level = 0.05,
                                iter = 10000,
                                warmup = 4000,
