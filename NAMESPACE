@@ -1,2 +1,6 @@
 export(mle_folded_normal)
+export(fitwrap)
+export(two_sample_testing)
+export(compile_stan_model)
 importFrom(stats, dnorm, mad, nlm, sd)
+importFrom(rstan, sampling, extract, stan_model)
