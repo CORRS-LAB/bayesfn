@@ -1,0 +1,27 @@
+Package: bayesfn
+Type: Package
+Title: Bayesian inference for folded normal
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Zhenfei", "Yuan",
+      email = "zf.yuan.y@gmail.com",
+      role = c("aut", "cre")
+    ),
+    person(
+      "Xiaoqing", "Pan",
+      email = "xpan@shnu.edu.cn",
+      role = c("aut")
+    ),
+    person(
+      "Yifan", "Yang",
+      email = "yfyang.86@hotmail.com",
+      role = c("aut")
+    )
+  )
+Description: More about what it does (maybe more than one line).
+    Continuation lines should be indented.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
