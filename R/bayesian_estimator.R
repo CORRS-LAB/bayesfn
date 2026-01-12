@@ -10,6 +10,8 @@
 ##' @param warmup Warmup iterations per chain (default \code{4000}).
 ##' @param chains Number of chains (default \code{4}).
 ##' @param model Optional compiled Stan model; if \code{NULL}, a cached model is loaded.
+##' @param support_restrict Logical; if \code{TRUE}, restricts parameter supports using the data by
+##'   setting \code{sigma_lower <- sd(x)} and \code{\mu_upper <- mean(x)}. Default \code{FALSE}.
 ##' @return A list with posterior means, Rhat diagnostics, and posterior samples for \code{mu} and \code{sigma}.
 ##' @export
 fn_bayes_est <- function(x,
@@ -18,10 +20,17 @@ fn_bayes_est <- function(x,
                                         iter = 10000,
                                         warmup = 4000,
                                         chains = 4,
-                                        model = NULL) {
+                                        model = NULL,
+                                        support_restrict = FALSE
+                                        ) {
     x <- as.numeric(x)
+    x <- abs(x)
     if (is.null(model)) {
         model <- get_stan_model()
+    }
+    if(support_restrict) {
+        sigma_lower <- sd(x)
+        mu_upper <- mean(x)
     }
     dl <- list(
         N = length(x),
