@@ -19,8 +19,9 @@ Authors@R: c(
       role = c("aut")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
+Description: Bayesian methods for parameter estimation of the folded normal
+    distribution and two-sample mean testing. Provides maximum likelihood
+    estimation (MLE) as a baseline for comparison.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
