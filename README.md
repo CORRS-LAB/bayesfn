@@ -74,10 +74,22 @@ The package uses a cached compiled Stan model for speed.
 
 ```r
 library(bayesfn)
+cat(stan_code, '\n')  # print the demo stan code, well formatted
 mdl <- compile_stan_model(stan_code)  # provided in the package
 ```
 
 On first use, compilation may take some time depending on your toolchain.
 
 ## License
+
 GPL-3
+
+## Change log
+
+### 2026-Jan-11
+
+Version 1: main features
+
+### 2026-Jan-17
+
+- Bugfix: Provide `stan_code` as standard internal R Data.

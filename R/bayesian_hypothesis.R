@@ -16,7 +16,7 @@
 ##' @param mu_upper Upper bound for \code{mu}; default \code{10}. Used for both groups
 ##'   unless \code{support_restrict = TRUE}.
 ##' @param support_restrict Logical; if \code{TRUE}, restricts parameter supports per group using the data by
-##'   setting \code{sigma_lower_i <- sd(xi)} and \code{\mu_upper_i <- mean(xi)} for each sample \code{i=1,2}.
+##'   setting \code{sigma_lower_i <- sd(xi)} and \code{mu_upper_i <- mean(xi)} for each sample \code{i=1,2}.
 ##' @return A list containing posterior samples for \code{mu1}, \code{mu2}, \code{sigma1}, \code{sigma2},
 ##'   the posterior probability \code{p_value = P(mu1 > mu2)}, and \code{decision} (0 accept H0, 1 accept H1).
 ##' @export
