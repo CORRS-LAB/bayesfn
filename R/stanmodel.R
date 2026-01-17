@@ -99,10 +99,11 @@ model {
 "
 
 
-
-
 model <- stan_model(model_code = stan_code)
 
-
-
-
+#' stan_code
+#' 
+#' Demo Stan model code for folded normal distribution with custom prior.
+#' @name stan_code
+#' @docType data
+NULL
